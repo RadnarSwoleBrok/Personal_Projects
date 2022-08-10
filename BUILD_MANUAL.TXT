@@ -4,7 +4,7 @@ Option 1:
   3. Install pyinstaller with pip or equivalent package handler
   4. run the following command: pyinstaller -onefile -w main.py(or equivalent path for the main file)
   5. A new file named dist should be created
-  6. Run the main.exe
+  6. Run the main.exe within the dist file.
   
 Option 2:
   1. Navigate to the main.py file and adjust the GravitySimulator imports to match up with your local directory
