@@ -16,11 +16,11 @@ Planet_Colors:
   Earth: (0, 0, 255)
 
 Planet_Masses:
-  Sun: 1.98e+17
-  Venus: 4.39e+5
-  Mercury: 3.94e+7
-  Earth: 5.9e+3
-  Mars: 5
+  Sun: 3.8e+17
+  Venus: 4.39e+4
+  Mercury: 3.94e+5
+  Earth: 5.9e+6
+  Mars: 5.6e+4
   Jupiter: 6
   Saturn: 7
   Uranus: 8
@@ -39,15 +39,15 @@ Planet_Radii:
 
 Planet_Positions:
   Sun: (0.0, 0.0)
-  Venus: (-50.0, 200.0)
+  Venus: (-50.0, 300.0)
   Mercury: (100.0, -200.0)
-  Earth: (0, -300)
+  Earth: (0, -500)
 
 Planet_Velocities:
   Sun: (0.0, 0.0)
-  Venus: (1.7, 0.25)
-  Mercury: (-1.7, 0.05)
-  Earth: (1.6, .05)
+  Venus: (1.0, 0.025)
+  Mercury: (-1.5, 0.05)
+  Earth: (1.2, .025)
 
 Constants:
   Astronomical_Unit: 149.6e6 * 1000
