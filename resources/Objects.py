@@ -1,12 +1,10 @@
 from __future__ import annotations
-
 from dataclasses import dataclass
 import numpy as np
-from Gravity_Simulator.Engine.Display.PyGameEngine import SimulationObject
 import pygame as pg
 
 @dataclass(slots=True)
-class Planet(SimulationObject):
+class Planet:
     """
     Simulation Object representing a planetary body for a star system simulation.
     How the object should be rendered is implemented here. Allows interfacing with
@@ -42,9 +40,11 @@ class Planet(SimulationObject):
         return x_force, y_force
 
     def compute_forces(self, other):
+        """Compute the forces of the object between the self and other objects."""
         return self.compute_GForce_vectors(other)
 
     def update_velocity(self, objects: list[Planet]):
+        """Updates the velocity of array after the appropriate forces have been computed."""
         total_fx = total_fy = 0
         for body in objects:
             if body.isSun and self.isSun:
@@ -56,10 +56,12 @@ class Planet(SimulationObject):
         self.velocity = np.add(self.velocity, updated_velocity)
 
     def update(self):
+        """Updates the position array after the velocity array has been updated."""
         self.position = np.add(self.position, self.velocity)
         np.append(self.orbital_path, self.position)
 
     def paint(self, canvas: pg.display):
+        """Implements the paint operation for the simulation object."""
         updated_points = []
         if len(self.orbital_path) > 1:
             for point in self.orbital_path:
